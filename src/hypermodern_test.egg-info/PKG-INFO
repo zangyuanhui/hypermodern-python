@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: hypermodern-test
+Version: 0.1.0
+Summary: The hypermodern Python project
+Home-page: https://github.com/zangyuanhui/hypermodern-test
+Author: zangyh
+Author-email: zangyuanhui@igengmei.com
+License: UNKNOWN
+Description: # hypermodern-test
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7,<4.0

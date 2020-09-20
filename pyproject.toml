@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "hypermodern-test"
+version = "0.1.0"
+authors = ["zangyh <zangyuanhui@igengmei.com>"]
+description = "The hypermodern Python project"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/zangyuanhui/hypermodern-test"
+repository = "https://github.com/zangyuanhui/hypermodern-test"
+keywords = ["hypermodern"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^7.0"
+requests = "^2.24.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+hypermodern-test = "hypermodern_test.console:main"
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+

@@ -1,0 +1,3 @@
+[console_scripts]
+hypermodern-test = hypermodern_test.console:main
+

@@ -15,9 +15,25 @@ click = "^7.0"
 requests = "^2.24.0"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.0.2"
+coverage = "^5.3"
+pytest-cov = "^2.10.1"
+toml = "^0.10.1"
+pytest-mock = "^3.3.1"
 
 [tool.poetry.scripts]
 hypermodern-test = "hypermodern_test.console:main"
+
+[tool.covrtage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coversge.run]
+branch = true
+source = ["hypermodern_test"]
+
+[tool.coverage.report]
+show_missing = true
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"

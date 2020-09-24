@@ -1,6 +1,6 @@
-import requests
 import click.testing
 import pytest
+import requests
 
 from hypermodern_test import console
 
@@ -10,20 +10,20 @@ def runner():
     return click.testing.CliRunner()
 
 
-#@pytest.fixture
-#def mock_request_get(mocker):
-#    mock = mocker.patch("requests.get")
-#    mock.return_value.__enter__.return_value.json.return_value={
-#        "title": "Lorem Ipsum",
-#        "extract": "Lorem ipsum dolor sit amet",
-#    }
-#    return mock
+# @pytest.fixture
+# def mock_request_get(mocker):
+#     mock = mocker.patch("requests.get")
+#     mock.return_value.__enter__.return_value.json.return_value={
+#         "title": "Lorem Ipsum",
+#         "extract": "Lorem ipsum dolor sit amet",
+#     }
+#     return mock
 
 
 def test_main_succeeds(runner, mock_request_get):
     runner.invoke(console.main)
     args, _ = mock_request_get.call_args
-    # assert "Lorem Ipsum" in result.output 
+    # assert "Lorem Ipsum" in result.output
     # assert mock_request_get.called
     assert "en.wikipedia.org" in args[0]
 

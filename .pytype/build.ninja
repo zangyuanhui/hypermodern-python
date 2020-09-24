@@ -1,0 +1,30 @@
+rule infer
+  command = /Users/edz/Documents/zangyh/hypermodern-test/.nox/pytype/bin/python -m pytype.single --imports_info $imports --module-name $module -V 3.7 -o $out --no-report-errors --nofail --quick $in
+  description = infer $module
+rule check
+  command = /Users/edz/Documents/zangyh/hypermodern-test/.nox/pytype/bin/python -m pytype.single --disable import-error --imports_info $imports --module-name $module -V 3.7 -o $out --analyze-annotated --nofail --quick $in
+  description = check $module
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/wikipedia.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/src/hypermodern_test/wikipedia.py
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/hypermodern_test.wikipedia.imports
+  module = hypermodern_test.wikipedia
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/test_wikipedia.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/test/test_wikipedia.py | /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/wikipedia.pyi
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/test.test_wikipedia.imports
+  module = test.test_wikipedia
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/noxfile.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/noxfile.py
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/noxfile.imports
+  module = noxfile
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/__init__.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/test/__init__.py
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/test.__init__.imports
+  module = test.__init__
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/__init__.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/src/hypermodern_test/__init__.py
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/hypermodern_test.__init__.imports
+  module = hypermodern_test.__init__
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/console.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/src/hypermodern_test/console.py | /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/__init__.pyi /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/wikipedia.pyi
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/hypermodern_test.console.imports
+  module = hypermodern_test.console
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/test_console.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/test/test_console.py | /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/console.pyi
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/test.test_console.imports
+  module = test.test_console
+build /Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/conftest.pyi: check /Users/edz/Documents/zangyh/hypermodern-test/test/conftest.py
+  imports = /Users/edz/Documents/zangyh/hypermodern-test/.pytype/imports/test.conftest.imports
+  module = test.conftest

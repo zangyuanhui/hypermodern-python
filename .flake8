@@ -1,8 +1,11 @@
 [flake8]
-select = B,B9,BLK,C,E,F,I,S,W
+# select = ANN,B,B9,BLK,C,E,F,I,S,W
+select = B,B9,BLK,C,E,S,W
 ignore = E203,E501,W503,S101
 max-line-length = 80
 max-complexity = 10
 application-import-names = hypermodern_test,test
 import-order-style = google
-pre-file-ignore = test/*:S101
+pre-file-ignores = ./test/*:S101,ANN
+    ./noxfile.py:ANN
+    ./src/*:S101,ANN

@@ -1,0 +1,9 @@
+# ninja log v5
+0	2617	1600932979848275148	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/noxfile.pyi	a4074214949413c5
+2617	5737	1600932983011862905	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/wikipedia.pyi	a623fca4a93603da
+5737	6821	1600932984137941863	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/test_wikipedia.pyi	e51bcdf1d3a73984
+6821	7938	1600932985259885850	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/__init__.pyi	4579c33c1b818a3d
+7938	8959	1600932986279810386	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/__init__.pyi	deb9cdba1ef677d8
+8960	11281	1600932988551837206	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/hypermodern_test/console.pyi	abc0fadf76e369e5
+11281	15245	1600932992489133297	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/test_console.pyi	a4c5c4d0aa660ae4
+15246	16230	1600932993548699833	/Users/edz/Documents/zangyh/hypermodern-test/.pytype/pyi/test/conftest.pyi	d1becee79e69e1d7

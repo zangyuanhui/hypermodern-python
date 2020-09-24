@@ -1,12 +1,15 @@
 import click.testing
+from click.testing import CliRunner
 import pytest
 import requests
+from unittest.mock import Mock
 
+from pytest_mock import MockFixture
 from hypermodern_test import console
 
 
 @pytest.fixture
-def runner():
+def runner() -> CliRunner:
     return click.testing.CliRunner()
 
 
@@ -41,7 +44,7 @@ def test_main_prints_message_on_request_error(runner, mock_request_get):
 
 
 @pytest.fixture
-def mock_wikipedia_random_page(mocker):
+def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
     return mocker.patch("hypermodern_test.wikipedia.random_page")
 
 
